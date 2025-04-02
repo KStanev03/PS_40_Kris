@@ -23,13 +23,15 @@ namespace DataLayer
                 });
                 context.SaveChanges();
                 var users = context.Users.ToList();
+
+
+
                 Console.WriteLine("All users in database:");
                 foreach (var user in users)
                 {
                     Console.WriteLine($"ID: {user.Id}, Name: {user.Name}, Role: {user.Role}, Expires: {user.Expires:yyyy-MM-dd}");
                 }
 
-                // Check for valid username and password
                 Console.WriteLine("\nEnter username:");
                 string username = Console.ReadLine();
 
